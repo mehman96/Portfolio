@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content  %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+   
+    <!-- Breadcrumb Begin -->
+    <div class="breadcrumb-option spad set-bg" data-setbg="{% static 'img/breadcrumb-bg.jpg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb__text">
+                        <h2>Məqalələr</h2>
+                        <div class="breadcrumb__links">
+                            <a href="#">Ana səhifə</a>
+                            <span>Məqalələr</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb End -->
+
+    <!-- Blog Section Begin -->
+    <section class="blog spad">
+        <div class="container">
+            <div class="row">
+                {% for item in items %}
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="blog__item">
+                        <h4>{{item.header}}</h4>
+                       
+                        <p>{{item.desc|safe}}</p>
+                       
+                        <span style="color: #fff; margin:10px;"  >{{item.date}}</span>     <a href="{{item.link}}">Read more <span class="arrow_right"></span></a>
+                    </div>
+                </div>
+                {% endfor  %}
+
+               
+            </div>
+       </div>
+       <ul class="pagination justify-content-center mb-10 pb-2 pt-2 mt-8" style="display: flex;justify-content: center;float: none;">
+        <li class="prev disabled">
+            {% if page_obj.has_previous %}
+            <a href="?page={{ page_obj.previous_page_number }}" aria-label="Previous" tabindex="-1" aria-disabled="true" style="margin: 0 5px;height: 33px;width: 33px;line-height: 31px;
+            justify-content: center;align-items: center;font-size: 12px;border-radius: 0px !important;border: none;background: #2d3a4b;color: #fff;padding: 0px;text-align: center; font-size: 12px; cursor: pointer;"
+            >
+                <i class="w-icon-long-arrow-left"></i>Prev
+            </a>
+                <!-- <a href="?page=1"></a> -->
+
+            {% endif %}
+        </li>
+        {% for page in page_obj.paginator.page_range %}
+                    {% if page is page_obj.number %}
+                        <li class="page-item active"><a class="page-link" style="margin: 0 5px;height: 33px;width: 33px;line-height: 31px;
+                          justify-content: center;align-items: center;font-size: 12px;" href="#">{{page}}</a></li>
+                    {% else %}
+                        <li class="page-item"><a href="?page={{page}}" class='page-link' style="margin: 0 5px;height: 33px;width: 33px;line-height: 31px;
+                          justify-content: center;align-items: center;font-size: 12px;">{{page}}</a></li>
+                        <a href="?page={{ page_obj.paginator.num_pages }}" ></a>
+                    {% endif %}
+                {% endfor %}
+        <li class="next">
+            {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}" aria-label="Next" style="margin: 0 5px;height: 33px;width: 33px;line-height: 31px;
+            justify-content: center;align-items: center;font-size: 12px;     background: #2d3a4b;color: #fff;  ">Next<i class="w-icon-long-arrow-right" ></i>
+            </a>
+            {% endif %}
+        </li>
+    </ul>
+    </section>
+
+
+   
+
+
+
+</body>
+
+
+
+
+</html>
+{% endblock %}

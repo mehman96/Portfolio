@@ -1,0 +1,389 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content  %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+
+<!-- Mirrored from technext.github.io/videograph/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 09 Dec 2021 12:13:02 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<!-- /Added by HTTrack -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Videograph Template">
+    <meta name="keywords" content="Videograph, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio</title>
+
+   
+    <style>
+        html,
+        body {
+          position: relative;
+          height: 100%;
+        }
+  
+        body {
+          background: #eee;
+          font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+          font-size: 14px;
+          color: #000;
+          margin: 0;
+          padding: 0;
+        }
+  
+        .swiper {
+          width: 100%;
+          height: 100%;
+        }
+  
+        .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          /* background: #fff; */
+  
+          /* Center slide text vertically */
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          -webkit-justify-content: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          -webkit-align-items: center;
+          align-items: center;
+        }
+  
+        .swiper-slide img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+
+
+        * {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #100028;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+.
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #100028;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #100028;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;}
+</style>
+      
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+
+
+    
+<section class="hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="swiper mySwiper"    style="height:572px ; left: -167px;top: 39px;">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="hero__text">
+                            <span>Backend Developer</span>
+                            <h2>Mehman Mirzəyev</h2>
+                            <a href="about.html" class="primary-btn">Haqqımda ətraflı məlumat</a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="hero__text">
+                            <span>Backend Developer</span>
+                            <h2>Python Developer</h2>
+                            <a href="about.html" class="primary-btn">Haqqımda ətraflı məlumat</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+
+
+
+    <!-- About Section Begin -->
+    <section class="about spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="about__pic">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="about__pic__item about__pic__item--large set-bg"  style="height:650px ; " data-setbg="{% static 'img/about/me1.jpg' %}"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about__text">
+                        <div class="section-title">
+                            <h2>Haqqımda</h2>
+                        </div>
+                        <div class="about__text__desc">
+                            <p> Mən Mirzəyev Mehman. Hal hazırda 19 yaşım var. İT sahəsində özümü inkişaf etdirirəm.
+                                Bu sahə ilə çox ciddi məşğul oluram. Məşğul olduğum müddətdə şəxsi inkişafım üçün
+                                layihələr və məqalələr yazmışam. Daima özümü inkişaf etdrimək üçün çox çalışıram.
+                                    
+                            </p>      
+                        </div>
+                        <div class="section-title">
+                            <h2>Təhsil</h2>
+                        </div>
+                        <div class="about__text__desc">
+                        <p> • 2019 - 2022   </p>   
+                        <p> Azərbaycan Texniki Universitetində Nəqliyyat və Logistika fakültəsində təhsil alıram  </p>   
+                        <p> • 2021 - 2022   </p>   
+                        <p>  Pragamatech Təhsil Mərkəzində Python üzrə təhsil alıram </p>
+                        <p> • 2021 - 2022   </p>   
+                        <p>  Pragamatech Təhsil Mərkəzində Mentor vəzifəsində fəaliyyət göstərirəm </p>
+                                      
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+
+   
+   
+
+  
+  
+
+<div class=" container-fluid ">
+    <div class=" row ">
+        <div class=" col-lg-12 ">
+            <div class=" section-title center-title ">
+                <h2>RƏYLƏR</h2>
+            </div>
+        </div>
+    </div>
+    <div class=" row ">
+        {% for team in teams %}
+        <div class=" col-lg-3 col-md-6 d-flex justify-content-center my-2 ">
+            <div class=" card ">
+                <div class=" face front-face "> <img src=" {{ team.image.url }}" alt=" " class=" profile ">
+                    <div class=" pt-3  "> {{team.name}} </div>
+                    <div class=" designation ">{{team.job}}</div>
+                </div>
+                <div class=" face back-face ">   <span class=" fas fa-quote-left " style="  top: 6px; left: 5px;" > </span>
+                    <div  class=" testimonial " style="font-size: 17px;  color:#fff" > {{team.desc|safe}}  </div  > <span class=" fas fa-quote-right " >  </span>
+                </div>
+            </div>
+        </div>
+   {% endfor %}
+        
+    </div>
+</div>
+
+
+
+<!-- Latest Blog Section Begin --> 
+
+<div class=" container ">
+    <div class=" row ">
+        <div class=" col-lg-12 ">
+            <div class=" section-title center-title ">
+                <h2>MƏQALƏLƏR</h2>
+            </div>
+           
+            <div class="d-flex justify-content-center">
+                  {% for item in items %}
+            <div class="mySlides col-6 ">
+              
+                    <div class="blog__item  "  >
+                        <h4   >{{item.header}}  </h4  >
+                       
+                        <p>{{item.desc|safe}}</p>
+                        
+                        <span style="color: #fff; margin:10px;"  >{{item.date}}</span>     <a href="{{item.link}}">Read more <span class="arrow_right"></span></a>
+                    </div>
+                </div>
+                {% endfor  %}
+              </div>
+         
+            
+              
+              <a class="next" onclick="plusSlides(-1)" style="color:#fff" ></a>
+              <a class="next" onclick="plusSlides(1)" style="color:#fff" >❯</a>
+              
+              </div>
+                  
+
+
+                <a class="prev" onclick="plusSlides(-1)" style="color:#fff" >❮</a>
+                <a class="next" onclick="plusSlides(1)" style="color:#fff" ></a>
+                
+                </div>
+                
+                <div class="dot-container">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+                </div>
+                
+        </div>
+    </div>
+  
+  
+</div>
+
+
+  
+
+
+    
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Js Plugins -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    pagination: {
+      el: ".swiper-pagination",
+      dynamicBullets: true,
+    },
+  });
+</script>
+
+    
+</body>
+
+
+
+
+</html>
+{% endblock %}

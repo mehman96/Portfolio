@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content  %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+
+
+
+    <!-- Breadcrumb Begin -->
+    <div class="breadcrumb-option spad set-bg" data-setbg="{% static 'img/breadcrumb-bg.jpg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb__text">
+                        <h2>Portfolio</h2>
+                        <div class="breadcrumb__links">
+                            <a href="#">Ana səhifə</a>
+                            <span>Portfolio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb End -->
+
+    <!-- Portfolio Section Begin -->
+    <section class="portfolio spad">
+        <div class="container">
+      
+         
+            <div class="row portfolio__gallery">
+                   {% for project in projects %}
+                <div class=" col-md-6 ">
+                    <div class="portfolio__item " style="width: 100%; object-fit: cover;" >
+                          <a href="{{project.link}}" <div class="portfolio__item__video set-bg" data-setbg="{{project.image.url}}">
+                         </a>
+                        </div>
+                        <div class="portfolio__item__text">
+                            <h4>{{project.heading}}</h4>
+                            <ul>
+                                <li>{{project.desc}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    {% endfor  %}
+         
+                </div>
+              
+            </div>
+            <ul class="pagination justify-content-center mb-10 pb-2 pt-2 mt-8" style="display: flex;justify-content: center;float: none;">
+                <li class="prev disabled">
+                    {% if page_obj.has_previous %}
+                    <a href="?page={{ page_obj.previous_page_number }}" aria-label="Previous" tabindex="-1" aria-disabled="true" style="margin: 0 5px;height: 33px;width: 33px;line-height: 31px;
+                    justify-content: center;align-items: center;font-size: 12px;border-radius: 0px !important;border: none;background: #2d3a4b;color: #fff;padding: 0px;text-align: center; font-size: 12px; cursor: pointer;"
+                    >
+                        <i class="w-icon-long-arrow-left"></i>Prev
+                    </a>
+                        <!-- <a href="?page=1"></a> -->
+        
+                    {% endif %}
+                </li>
+                {% for page in page_obj.paginator.page_range %}
+                            {% if page is page_obj.number %}
+                                <li class="page-item active"><a class="page-link" style="margin: 0 5px;height: 33px;width: 33px;line-height: 31px;
+                                  justify-content: center;align-items: center;font-size: 12px;" href="#">{{page}}</a></li>
+                            {% else %}
+                                <li class="page-item"><a href="?page={{page}}" class='page-link' style="margin: 0 5px;height: 33px;width: 33px;line-height: 31px;
+                                  justify-content: center;align-items: center;font-size: 12px;">{{page}}</a></li>
+                                <a href="?page={{ page_obj.paginator.num_pages }}" ></a>
+                            {% endif %}
+                        {% endfor %}
+                <li class="next">
+                    {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}" aria-label="Next" style="margin: 0 5px;height: 33px;width: 33px;line-height: 31px;
+                    justify-content: center;align-items: center;font-size: 12px;     background: #2d3a4b;color: #fff;  ">Next<i class="w-icon-long-arrow-right" ></i>
+                    </a>
+                    {% endif %}
+                </li>
+            </ul>
+        
+        </div>
+    </section>
+    <!-- Portfolio Section End -->
+
+
+</body>
+
+
+<!-- Mirrored from technext.github.io/videograph/portfolio.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 09 Dec 2021 12:13:32 GMT -->
+
+</html>
+{% endblock %}
